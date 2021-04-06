@@ -5,5 +5,11 @@ import guru.springframework.my_sfg_brewery.web.model.BeerDTO;
 import java.util.UUID;
 
 public interface BeerService {
-    public BeerDTO getBeerByID(UUID beerId);
+    BeerDTO getBeerByID(UUID beerId);
+
+    BeerDTO saveBeer(BeerDTO beerDTO);
+
+    void updateBeer(UUID beerId, BeerDTO beerDTO);
+
+    void deleteBeer(UUID beerId);
 }
